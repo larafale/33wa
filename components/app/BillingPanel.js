@@ -1,0 +1,20 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import _ from 'lodash'
+import { getContext } from 'recompose'
+
+export default class BillingPanel extends Component {
+
+  render () {
+
+    return (<div className="box">
+      <div className="d-none d-lg-block">
+        <div className="h3">Billing</div>
+        <hr/>
+      </div>
+    </div>)
+
+  }
+
+}

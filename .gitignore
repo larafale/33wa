@@ -1,0 +1,12 @@
+/npm-debug.log
+/node_modules
+/scripts
+/.vscode
+/dump
+package-lock.json
+sftp-config.json
+tmp.js
+.next
+.DS_Store
+.env.*
+.env

@@ -1,0 +1,10 @@
+{
+    "apps" : [{
+        "name": "8333-dev",
+        "script": "server.js",
+        "watch": ["server.js", "lib/**/*", "pages/**/*", "components/**/*"],
+        "env": {
+          "NODE_ENV": "dev" 
+        }
+    }]
+}
