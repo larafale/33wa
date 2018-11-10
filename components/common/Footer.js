@@ -16,7 +16,12 @@ export default class Footer extends Component {
         <div>
           <strong>8333.io</strong>
           <span className="d-none d-sm-inline">
-             by <a className="text-warning">larafale</a>.
+            <span className="social-links fs-16 ml-3">
+              <a className="mr-2" href="https://github.com/83x33" title="github"><i className="fa fa-github" /></a>
+              <a className="mr-2" href="irc://freenode/8333io" title="IRC channel #8333io"><i className="fa fa-hashtag" /></a>
+              <a className="mr-2" href="https://twitter.com/_8333_" title="twitter"><i className="fa fa-twitter" /></a>
+            </span>
+             {/*y <a className="text-warning">larafale</a>.*/}
           </span>
         </div>
         <div>

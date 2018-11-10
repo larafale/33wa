@@ -56,7 +56,7 @@ export default class Header extends Component {
               <li className={`nav-item ${page=='app'&&'active'}`}>
                 <Link href="/app?page=app&panel=invoices" as="/app">
                   <a className="nav-link">
-                    { authed ? 'Dashboard' : 'Dashboard' }
+                    { authed ? 'Dashboard' : 'Enter Dashboard' }
                   </a>
                 </Link>
               </li>

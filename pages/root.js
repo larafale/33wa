@@ -62,7 +62,7 @@ class AppContainer extends Component {
         }
       }
       catch(e){ 
-        if(p.token) console.log(`Invalid apikey "${p.token}"`) 
+        if(p.token) console.log(e.message || `Invalid apikey "${p.token}"`) 
       }
     }
 

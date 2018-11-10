@@ -19,7 +19,6 @@ import {
 
 import Explorer from './explorer'
 import Site from './site/Home.js'
-import Docs from './site/Docs.js'
 import Appication from './app/App.js'
 
 import Widget from './widget/index.js'

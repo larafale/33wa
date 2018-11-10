@@ -51,6 +51,7 @@ code {
 }
 
 a { color: #ffc107; }
+a:hover { color: #ecc007c9; }
 
 
 ::selection {

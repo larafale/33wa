@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
+import Link from 'next/link'
 import Script from 'react-load-script'
 import Widget from '../widget/index.js'
 import moment from 'moment'
 import Steper from '../common/Steper.js'
 import Texts from '../hoc/texts.js'
 import { md2Html } from '../hoc/utils'
+import hljs from 'highlight.js'
+
 
 
 const snippet = `<html>
@@ -76,7 +79,9 @@ export default class Home extends Component {
     , widgetStatus: 'pending'
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    highlight()
+  }
 
 
   render() {
@@ -102,7 +107,7 @@ export default class Home extends Component {
           <div className="row">
             <div className="col-12 text-center">
               <h2 className="m-5 pb-5">{Texts.t('hero')}</h2>
-              
+
               <div className="lead mb-5">{Texts.t('subhero')}</div>
             </div>
           </div>
@@ -144,7 +149,7 @@ export default class Home extends Component {
               <div data-aos="fade-right" data-aos-offset="200"  data-aos-anchor-placement="top-bottom">
                 <div className={`${widgetReady?'d-none d-md-block':'d-none'}`}>
                   <div className="snippet">
-                    <pre><code style={{color: 'white'}}>{snippet}</code></pre>
+                    <pre><code >{snippet}</code></pre>
                   </div>
                 </div>
               </div>
@@ -194,17 +199,7 @@ export default class Home extends Component {
               <div className="">{Texts.md('who')}</div>
             </div>
           </div>
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <a className="btn btn-outline-warning btn-lg">Enter your dashboard</a>
-            </div>
-          </div>
-        </div>
-
-        
+        </div>        
       
       </div>
 
