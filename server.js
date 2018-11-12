@@ -1,6 +1,5 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 const micro =  require('micro')
-const { send } =  require('micro')
 const { router, get, redirect, redirectJsFile } =  require('./lib/router')
 const next =  require('next')
 require('isomorphic-fetch')

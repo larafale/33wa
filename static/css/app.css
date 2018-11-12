@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: monospace;
+  font-family: monospace, "Courier new", monospace;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   background: transparent;

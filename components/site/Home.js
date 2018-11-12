@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
-import Script from 'react-load-script'
 import Widget from '../widget/index.js'
 import moment from 'moment'
 import Steper from '../common/Steper.js'
 import Texts from '../hoc/texts.js'
 import { md2Html } from '../hoc/utils'
-import hljs from 'highlight.js'
+import hljs from '../hoc/hljs'
+
 
 
 
@@ -202,13 +202,6 @@ export default class Home extends Component {
         </div>        
       
       </div>
-
-
-
-      <Script
-        url="https://unpkg.com/highlight.js@9.12.0/lib/highlight.js"
-        onLoad={highlight}
-      />
 
 
       <style jsx>{`

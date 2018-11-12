@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import _ from 'lodash'
+import keys from 'lodash/keys'
 import { getContext } from 'recompose'
 import { spinOn, spinOff } from '../../lib/util'
 import { toast } from 'react-toastify'
@@ -150,7 +150,7 @@ export default class Wallet extends Component {
                 <i className="fa fa-info-circle" rel="tooltip" data-toggle="tooltip" data-html="true" data-title="<small class='d-inline-block'>Default ticker for invoices.<br>Can also be set at invoice creation.</small>" />
               </label>
               <select onChange={setForm('ticker')} value={form.ticker} className="form-control">
-                { _.keys(priceInfo.symbols).map((ticker, i) =>
+                { keys(priceInfo.symbols).map((ticker, i) =>
                   <option key={i} value={ticker} >
                     {priceInfo.symbols[ticker].ticker}
                   </option>
@@ -163,7 +163,7 @@ export default class Wallet extends Component {
                 <i className="fa fa-info-circle" rel="tooltip" data-toggle="tooltip" data-html="true" data-title="<small class='d-inline-block'>Default fiat currency to check price against.</small>" />
               </label>
               <select onChange={setForm('fiat')} value={form.fiat} className="form-control">
-                { _.keys(priceInfo.symbols).filter(i=>(!['btc','mbtc','satoshis'].includes(i))).map((ticker, i) =>
+                { keys(priceInfo.symbols).filter(i=>(!['btc','mbtc','satoshis'].includes(i))).map((ticker, i) =>
                   <option key={i} value={ticker}>
                     {priceInfo.symbols[ticker].ticker}
                   </option>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import _ from 'lodash'
+import find from 'lodash/find'
 import { getContext } from 'recompose'
 import { SpinnerBox } from '../common/Spinner'
 import moment from 'moment'
@@ -136,7 +136,7 @@ export default class Invoices extends Component {
                   <small className="d-none d-sm-block">
                     {moment(invoice.cat).format('DD MMM YYYY HH:mm')}
                     <br/>
-                    {(_.find(wallets, w => w.id === invoice.wid) || {}).name}
+                    {(find(wallets, w => w.id === invoice.wid) || {}).name}
                   </small>
                 </td>
               </tr>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MarkdownIt from 'markdown-it'
-import hljs from 'highlight.js'
-import _ from 'lodash'
+import hljs from '../hoc/hljs'
+import keys from 'lodash/keys'
 
 const MD = new MarkdownIt({ 
 		html: true 
@@ -117,12 +117,12 @@ export default class DaDocs extends Component {
 
 	    		<div className="d-none d-md-block doc-menu col-md-3 position-sticky" style={{top:0}}>
 	    			<ul className="list-unstyled">
-	    			{ _.keys(tree).map((levelone, i) =>
+	    			{ keys(tree).map((levelone, i) =>
 	            <li key={i} className="cursor">
 	              <div onClick={e=>this.clickMenu(tree[levelone].class)} className="my-2 doc-menu-one">{levelone}</div>
 
 	              <ul>
-			    			{ _.keys(tree[levelone].subs).map((leveltwo, j) =>
+			    			{ keys(tree[levelone].subs).map((leveltwo, j) =>
 			            <li key={j} onClick={()=>{}} className="cursor">
 			              <div onClick={e=>this.clickMenu(tree[levelone].subs[leveltwo].class)} className="doc-menu-two">{leveltwo}</div>
 			            </li>

@@ -3,6 +3,8 @@
 /scripts
 /.vscode
 /dump
+/static/build/*
+!/static/build/.gitkeep
 package-lock.json
 sftp-config.json
 tmp.js

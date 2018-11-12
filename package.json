@@ -5,7 +5,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production next build",
+    "css": "npx cleancss static/css/* > ./static/build/app.min.css",
+    "build": "NODE_ENV=production npm run css && next build",
     "start": "pm2 startOrReload ecosystem.json",
     "dev": "pm2 startOrReload ecosystem.dev.json",
     "deployNow": "next build && now -f --local-config=./now.production.json",
@@ -14,6 +15,7 @@
   "author": "Louis Grellet <as1cron@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.2-canary.0",
     "async": "^2.6.1",
     "axios": "^0.17.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
@@ -27,15 +29,16 @@
     "lodash": "^4.17.4",
     "markdown-it": "^8.4.2",
     "micro": "^7.3.3",
+    "micro-compress": "^1.0.0",
     "moment": "^2.20.0",
-    "next": "^7.0.0",
+    "next": "^7.0.2",
+    "next-compose-plugins": "^2.1.1",
     "nprogress": "^0.2.0",
     "promise.prototype.finally": "^3.1.0",
     "prop-types": "^15.6.0",
     "qrcode.react": "^0.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-load-script": "0.0.6",
     "react-toastify": "^3.2.1",
     "recompose": "^0.23.5",
     "rxjs": "^5.5.5",
@@ -47,6 +50,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
-    "@babel/plugin-proposal-decorators": "^7.1.0"
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "clean-css-cli": "^4.2.1"
   }
 }

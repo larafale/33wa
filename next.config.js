@@ -1,7 +1,11 @@
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
-const webpack = require('webpack');
+const webpack = require('webpack')
+const withPlugins = require('next-compose-plugins')
+const withCSS = require('@zeit/next-css')
+// const purgecss = require('next-purgecss')
 
-module.exports = {
+
+const nextConfig = {
   webpack(config, { dev }) {
 
     config.plugins.push(
@@ -20,3 +24,10 @@ module.exports = {
     return config;
   }
 }
+
+const plugins = [
+    [withCSS, { /* config */ }]
+  // , [purgecss, { /* config */ }]
+]
+
+module.exports = withPlugins(plugins, nextConfig);

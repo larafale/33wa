@@ -6,7 +6,6 @@ import jwt from 'jsonwebtoken'
 
 
 
-
 class AppContainer extends Component {
 
   static async getInitialProps (props) {    

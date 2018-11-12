@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import _ from 'lodash'
+import keys from 'lodash/keys'
+import take from 'lodash/take'
 import { getContext } from 'recompose'
 import { spinOn, spinOff } from '../../lib/util'
 
@@ -92,7 +93,7 @@ export default class PubkeyWidget extends Component {
 
 
     const KeyValueLabels = ({ obj }) => <div>
-      { _.keys(obj).map((key, i) => <div key={i}>
+      { keys(obj).map((key, i) => <div key={i}>
         <div><strong>{key} :</strong><small>{'  '+obj[key]}</small></div>
       </div>)}
     </div>
@@ -112,7 +113,7 @@ export default class PubkeyWidget extends Component {
 
               <div className="col-12 col-md-6 mb-2">
                 <div className="bg-light p-3">
-                  { _.take(derivations, 2).map((wif, i) => <div key={i}>
+                  { take(derivations, 2).map((wif, i) => <div key={i}>
                     <div><span className="badge badge-warning">{i+1}</span><small>{'  '+wif}</small></div>
                   </div>)}
                   <div><span className="badge badge-warning">{3}</span><small>{'  '+'...'}</small></div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import _ from 'lodash'
+import find from 'lodash/find'
 import { getContext } from 'recompose'
 import { spinOn, spinOff } from '../../lib/util'
 import { formatPrice } from '../../lib/btc-price'
@@ -67,7 +67,7 @@ export default class Invoice extends Component {
     const { editInvoice, invoice, wallets } = this.props
     const { form } = this.state
     const { price } = invoice
-    const wallet = _.find(wallets, s => s.id === form.wid) || wallets[0] || {}
+    const wallet = find(wallets, s => s.id === form.wid) || wallets[0] || {}
 
     const setForm = key => e => {
       this.setState({ form: { ...form, [key]: e.target.value } })
@@ -154,7 +154,7 @@ export default class Invoice extends Component {
                 </tr>}
                 <tr className="d-none d-sm-table-row">
                   <td><label>Wallet</label></td>
-                  <td className="text-right">{(_.find(wallets, w => w.id === invoice.wid) || {}).name}</td>
+                  <td className="text-right">{(find(wallets, w => w.id === invoice.wid) || {}).name}</td>
                 </tr>
                 <tr className="d-none d-sm-table-row">
                   <td><label>Address</label></td>

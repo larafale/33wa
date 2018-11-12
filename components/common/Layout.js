@@ -18,23 +18,9 @@ export default  function Layout({ noHeaders, children }) { return (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>8333.io</title>
-
-      <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@4.0.0-beta.3/dist/css/bootstrap.min.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/app.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/utils.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/nprogress.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/animate.css" />
-      <link rel="stylesheet" type="text/css" href="/static/css/highlight.css" />
-      <link rel="stylesheet" type="text/css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" />
-      <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-      <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-      <script src="https://unpkg.com/tether@1.2.4/dist/js/tether.min.js"></script>
-      <script src="https://unpkg.com/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-      <script src="https://unpkg.com/bootstrap@4.0.0-beta.3/dist/js/bootstrap.min.js"></script>
-      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-      
+      <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="/static/build/app.min.css" />
     </Head>
-
 
 
     <div className="body">
@@ -44,6 +30,18 @@ export default  function Layout({ noHeaders, children }) { return (
       </div>
       { !noHeaders && <Footer /> }
     </div>
+    
+
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css@3.7.0/animate.min.css" />
+    
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.14.0/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <style jsx>{`
       .body {
@@ -55,7 +53,7 @@ export default  function Layout({ noHeaders, children }) { return (
       .body-content {
         flex: 1;
       }
-      `}</style>
+    `}</style>
     
   </div>
 )}
