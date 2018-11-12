@@ -38,7 +38,7 @@ export default  function Layout({ noHeaders, children }) { return (
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/animate.css@3.7.0/animate.min.css" />
     
-    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/popper.js@1.14.0/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/bootstrap@4.1.0/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
