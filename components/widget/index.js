@@ -159,7 +159,7 @@ export default class Widget extends Component {
           </div>}
             
           { status == 'received' && <div className="text-center animated flipInX">
-            <i className={`fa fa-shield icon-xl text-warning`}/>
+            <i className={`fa fa-shield-alt icon-xl text-warning`}/>
             <div className="h4 my-4">Settling Payment</div>
             <Status invoice={invoice} tip={tip} theme={theme} />
             <NextBlock tip={tip} />
@@ -332,7 +332,7 @@ const Status = ({ invoice, tip, theme = "light" }) => {
 
   return (['pending', 'received'].includes(status) && <div className="text-center ">
     <div className="status p-2">
-      <i className={`fa fa-rotate-right ${env=='production'?'fa-spin':''} ${theme} mr-2`} />
+      <i className={`fa fa-circle-notch ${env=='production'?'fa-spin':''} ${theme} mr-2`} />
       { status == 'pending' && <span>waiting for payment</span>}
       { status == 'received' && <span className="animated fadeIn delay-05">
         { block == 1 && `confirming in 1 block` }

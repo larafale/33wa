@@ -62,7 +62,7 @@ export default class Header extends Component {
               </li>
               { authed && <li className="nav-item d-flex align-items-center cursor">
                 <a title="sign out" onClick={()=>setToken('')} className="nav-link d-flex">
-                  <i className="fa fa-sign-out" />
+                  <i className="fa fa-sign-out-alt" />
                 </a>
               </li>}
             </ul>
