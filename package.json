@@ -8,6 +8,7 @@
     "css": "npx cleancss static/css/* > ./static/build/app.min.css",
     "build": "NODE_ENV=production npm run css && next build",
     "start": "pm2 startOrReload ecosystem.json",
+    "local": "NODE_ENV=production node server.js",
     "dev": "pm2 startOrReload ecosystem.dev.json",
     "deployNow": "next build && now -f --local-config=./now.production.json",
     "deployNowdev": "next build && now -f --local-config=./now.dev.json"
