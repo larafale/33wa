@@ -127,7 +127,7 @@ export default class Auth extends Component {
         </div>}
 
         { step == 2 && <div className="text-center animated flipInX">
-          <i className={`fa fa-envelope-o icon-success text-warning`}/>
+          <i className={`fa fa-envelope icon-success text-warning`}/>
           <div className="h4 mt-3 text-light">Check your inbox!</div>
         </div>}
 
